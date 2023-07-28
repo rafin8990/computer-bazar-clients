@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "name": "Processor",
+    "imageUrl": "https://www.trustedreviews.com/wp-content/uploads/sites/54/2021/03/Intel-Rocker-Lake-2-e1615908186584-920x614.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Motherboard",
+    "imageUrl": "https://www.binarylogic.com.bd/images/product_image/largegigabyte-b660m-gaming-x-12th-gen-motherboard.webp"
+  },
+  {
+    "id": "3",
+    "name": "RAM",
+    "imageUrl": "https://www.techjunkie.com/wp-content/uploads/2022/03/Crucial.png"
+  },
+  {
+    "id": "4",
+    "name": "Power Supply Unit",
+    "imageUrl": "https://assets.hardwarezone.com/img/2022/03/Armaggeddon_Voltron_Gold_475_RGB.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Storage Device",
+    "imageUrl": "https://selltech.com.bd/image/cache/catalog/WD.jpg-550x550h.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Monitor",
+    "imageUrl": "https://cdn.thewirecutter.com/wp-content/media/2021/05/27-inch-monitor-2048px-1569-3x2-1.jpg?auto=webp&quality=75&crop=3:2&width=1024"
+  },
+  {
+    "id": "7",
+    "name": "GPU",
+    "imageUrl": "https://global.aorus.com/upload/Product/F_20201230135856TD1TZv.JPG"
+  },
+  {
+    "id": "8",
+    "name": "Mouse",
+    "imageUrl": "https://image.coolblue.nl/624x351/content/833dedefc88b3b3b5d625577025398f6"
+  },
+  {
+    "id": "9",
+    "name": "Keyboard",
+    "imageUrl": "https://assets-prd.ignimgs.com/2023/05/08/screen-shot-2023-05-08-at-2-40-49-pm-1683582062788.png"
+  }
+]

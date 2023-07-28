@@ -25,48 +25,100 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
+            <Link className="text-lg mx-2" href="/">
+              <li>Home</li>
+            </Link>
             <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
+              Motherboard
               <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
+                <li className="text-lg mx-2">
+                  <Link href="/category/Processor">Processor</Link>
                 </li>
-                <li>
-                  <a>Submenu 2</a>
+                <li className="text-lg mx-2">
+                  <Link href="/category/Motherboard">Motherboard</Link>
+                </li>
+                <li className="text-lg mx-2">
+                  <Link href="/category/RAM">RAM</Link>
+                </li>
+                <li className="text-lg mx-2">
+                  <Link href="/category/Power%20Supply%20Unit">
+                    Power Supply Unit
+                  </Link>
+                </li>
+                <li className="text-lg mx-2">
+                  <Link href="/category/Storage%20Device">Storage Device</Link>
+                </li>
+                <li className="text-lg mx-2">
+                  <Link href="/category/Monitor">Monitor</Link>
+                </li>
+                <li className="text-lg mx-2">
+                  <Link href="/category/GPU">GPU</Link>
+                </li>
+                <li className="text-lg mx-2">
+                  <Link href="/category/Mouse">Mouse</Link>
+                </li>
+                <li className="text-lg mx-2">
+                  <Link href="/category/Keyboard">Keyboard</Link>
                 </li>
               </ul>
             </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            <Link className="text-lg mx-2" href="/">
+              <li>About</li>
+            </Link>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <Link href="/" className="btn btn-ghost normal-case text-xl">
+          Computer Bazar
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li tabIndex={0}>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
+          <Link className="text-lg mx-2" href="/">
+            <li>Home</li>
+          </Link>
+
+          <div className="dropdown dropdown-hover">
+            <label tabIndex={0} className=" my-1 mx-2 text-lg ">
+              Categories
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li className="text-lg mx-2">
+                <Link href="/category/Processor">Processor</Link>
+              </li>
+              <li className="text-lg mx-2">
+                <Link href="/category/Motherboard">Motherboard</Link>
+              </li>
+              <li className="text-lg mx-2">
+                <Link href="/category/RAM">RAM</Link>
+              </li>
+              <li className="text-lg mx-2">
+                <Link href="/category/Power%20Supply%20Unit">
+                  Power Supply Unit
+                </Link>
+              </li>
+              <li className="text-lg mx-2">
+                <Link href="/category/Storage%20Device">Storage Device</Link>
+              </li>
+              <li className="text-lg mx-2">
+                <Link href="/category/Monitor">Monitor</Link>
+              </li>
+              <li className="text-lg mx-2">
+                <Link href="/category/GPU">GPU</Link>
+              </li>
+              <li className="text-lg mx-2">
+                <Link href="/category/Mouse">Mouse</Link>
+              </li>
+              <li className="text-lg mx-2">
+                <Link href="/category/Keyboard">Keyboard</Link>
+              </li>
+            </ul>
+          </div>
+          <Link className="text-lg mx-2" href="/">
+            <li>About</li>
+          </Link>
         </ul>
       </div>
       <div className="navbar-end">
@@ -74,7 +126,7 @@ const Navbar = () => {
           className="btn bg-emerald-500 hover:bg-emerald-500 text-white hover:text-white "
           href="/login"
         >
-          Login
+          PC Builder
         </Link>
         <Link
           className="btn ml-2 bg-emerald-500 hover:bg-emerald-500 text-white hover:text-white "
