@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import RegisterLayout from "@/components/Layouts/RegisterLayout";
+import RootLayouts from "@/components/Layouts/RootLayouts";
+import React from "react";
 
-const ProductDetails = ({ product }) => {
+const FeatureProductsPage = ({ product }) => {
   return (
     <div>
       <div className="lg:flex justify-center ">
@@ -61,14 +62,13 @@ const ProductDetails = ({ product }) => {
   );
 };
 
-export default ProductDetails;
-
-ProductDetails.getLayout = function getLayout(page) {
-  return <RegisterLayout>{page}</RegisterLayout>;
+export default FeatureProductsPage;
+FeatureProductsPage.getLayout = function getLayout(page) {
+  return <RootLayouts>{page}</RootLayouts>;
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`http://localhost:5000/allproduct`);
+  const res = await fetch(`http://localhost:5000/featureProducts`);
   const data = await res.json();
 
   const paths = data.map((category) => ({
@@ -82,7 +82,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { productId } = params;
-  const res = await fetch(`http://localhost:5000/product/${productId}`);
+  const res = await fetch(`http://localhost:5000/feature/${productId}`);
   const data = await res.json();
   return {
     props: {
