@@ -2,7 +2,6 @@
 import RegisterLayout from "@/components/Layouts/RegisterLayout";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { signIn } from "next-auth/react";
 
 const RegisterPage = () => {
   const { register, handleSubmit } = useForm();
@@ -23,10 +22,7 @@ const RegisterPage = () => {
                 alt=""
               />
             </button>
-            <button
-              onClick={() => signIn("github")}
-              className="text-white border border-gray-500 p-2 w-10 h-10 text-xl rounded-full mx-2"
-            >
+            <button className="text-white border border-gray-500 p-2 w-10 h-10 text-xl rounded-full mx-2">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
                 alt=""

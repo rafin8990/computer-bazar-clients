@@ -1,8 +1,6 @@
 import Link from "next/link";
-import { useSession, signOut } from "next-auth/react";
 
 const Navbar = () => {
-  const { data: session } = useSession();
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
