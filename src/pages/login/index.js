@@ -1,9 +1,12 @@
 import RegisterLayout from "@/components/Layouts/RegisterLayout";
-import RootLayouts from "@/components/Layouts/RootLayouts";
+import { useForm } from "react-hook-form";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 
 /* eslint-disable @next/next/no-img-element */
 const LoginPage = () => {
+  const { register, handleSubmit } = useForm();
+
   return (
     <div className=" min-h-screen lg:flex justify-between items-center ">
       <div>
@@ -21,7 +24,10 @@ const LoginPage = () => {
                 alt=""
               />
             </button>
-            <button className="text-white border border-gray-500 p-2 w-10 h-10 text-xl rounded-full mx-2">
+            <button
+              onClick={() => signIn("github")}
+              className="text-white border border-gray-500 p-2 w-10 h-10 text-xl rounded-full mx-2"
+            >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
                 alt=""
@@ -34,18 +40,22 @@ const LoginPage = () => {
           <form>
             <div>
               <input
-                className="input input-bordered w-96"
-                placeholder="Email"
+                {...register("email", {
+                  required: "Email Address is required",
+                })}
                 type="email"
-                id=""
+                placeholder="Enter Email"
+                className="input input-bordered md:w-[450px] "
               />
             </div>
             <div className="mt-5">
               <input
-                className="input input-bordered w-96"
-                placeholder="Password"
+                {...register("password", {
+                  required: "Password is required",
+                })}
                 type="password"
-                id=""
+                placeholder="Enter password"
+                className="input input-bordered w-full"
               />
             </div>
             <div className="mt-5">

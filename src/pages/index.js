@@ -11,19 +11,18 @@ const HomePage = ({ categories, featureProducts }) => {
           className="hero h-[600px]"
           style={{
             backgroundImage:
-              "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
+              "url(https://www.binarylogic.com.bd/images/banner_image/l/slider-image-binary-logic%20copy.webp)",
           }}
         >
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
-            <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <div className="max-w-xl">
+              <h1 className="mb-5 text-6xl font-bold">
+                Welcome to Computer BAZAR
+              </h1>
               <p className="mb-5">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
+                We Provide the best Product in a chief price
               </p>
-              <button className="btn btn-primary">Get Started</button>
             </div>
           </div>
         </div>
@@ -51,7 +50,7 @@ const HomePage = ({ categories, featureProducts }) => {
           Feature Products
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 my-5">
         {featureProducts?.map((category) => (
           <div
             key={category?._id}

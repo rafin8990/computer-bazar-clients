@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useSession, signOut } from "next-auth/react";
 
 const Navbar = () => {
+  const { data: session } = useSession();
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -128,12 +130,22 @@ const Navbar = () => {
         >
           PC Builder
         </Link>
-        <Link
-          className="btn ml-2 bg-emerald-500 hover:bg-emerald-500 text-white hover:text-white "
-          href="/register"
-        >
-          Sign Up
-        </Link>
+        {session?.user ? (
+          <button
+            onClick={() => signOut()}
+            className="btn ml-2 bg-emerald-500 hover:bg-emerald-500 text-white hover:text-white "
+            href="/register"
+          >
+            Log Out
+          </button>
+        ) : (
+          <Link
+            className="btn ml-2 bg-emerald-500 hover:bg-emerald-500 text-white hover:text-white "
+            href="/register"
+          >
+            Sign Up
+          </Link>
+        )}
       </div>
     </div>
   );
