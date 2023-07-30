@@ -1,9 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import RootLayouts from "@/components/Layouts/RootLayouts";
+import { addToBuilder } from "@/redux/pcBuilder/pcBuilderSlice";
 import Link from "next/link";
 import React from "react";
+import { useDispatch } from "react-redux";
 
 const BuilderItems = ({ categories }) => {
+  const dispatch = useDispatch();
+  const addProductToBuilder = (productData) => {
+    dispatch(addToBuilder(productData));
+  };
   return (
     <div>
       <div className="overflow-x-auto">
@@ -44,7 +50,12 @@ const BuilderItems = ({ categories }) => {
                 <td>{category?.price}৳</td>
                 <th>
                   <Link href={`/pcbuilder`}>
-                    <button className="btn  btn-xs">Select</button>
+                    <button
+                      onClick={() => addProductToBuilder(category)}
+                      className="btn  btn-xs"
+                    >
+                      Select
+                    </button>
                   </Link>
                 </th>
               </tr>
