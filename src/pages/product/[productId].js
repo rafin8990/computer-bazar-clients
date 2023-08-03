@@ -90,3 +90,7 @@ export const getStaticProps = async ({ params }) => {
     },
   };
 };
+
+// okk
+// okk
+// okk
