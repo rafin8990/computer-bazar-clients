@@ -90,7 +90,3 @@ export const getStaticProps = async ({ params }) => {
     },
   };
 };
-
-// hello
-// hello
-// hello
