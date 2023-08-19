@@ -90,3 +90,5 @@ export const getStaticProps = async ({ params }) => {
     },
   };
 };
+
+// I have some local data
