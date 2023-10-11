@@ -102,11 +102,3 @@ export const getStaticProps = async () => {
   };
 };
 
-// testing
-// testing
-// testing
-// testing
-// testing
-// testing
-// testing
-// testing 
